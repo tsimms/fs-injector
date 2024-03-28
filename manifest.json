@@ -1,0 +1,40 @@
+{
+  "name": "FullStory DXI Capture Controller",
+  "description": "Utility to control the FullStory capture script. Learn more about FullStory at: https://fullstory.com/",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_start",
+      "js": ["inject.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "fs_capture_controller.js" ],
+      "matches": [ "*://*/*" ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "32": "/images/icon_32.png",
+    "72": "/images/icon_72.png",
+    "192": "/images/icon_192.png",
+    "256": "/images/icon_256.png"
+  }
+}

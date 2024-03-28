@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/bootstrap/icons/font/bootstrap-icons.css">
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="container">
+    <h1>DXI Capture Controller</h1>
+    <div><span><i id="status-ball" class="bi-circle-fill not-loaded"></i></span> FullStory is <span id="status">not</span> detected.<span id="siteOrgId"></span></div>
+    <div id="url" class="value"></div>
+
+    <div class="input-group input-group-sm mb-3"><span class="input-group-text">OrgId</span><input type="text" id="orgId" name="orgId" class="form-control aria-label="orgId input" /><button class="btn btn-outline-secondary" id="save">Save</button></div>
+    <div>
+    <button class="btn btn-secondary" id="inject"><i class="bi-lightning-fill" role="img" aria-label="inject"></i></button>
+    <button class="btn btn-secondary" id="stop"><i class="bi-stop-fill" role="img" aria-label="stop"></i></button>
+    <button class="btn btn-secondary" id="resume"><i class="bi-play-fill" role="img" aria-label="resume"></i></button>
+    <button class="btn btn-secondary" id="pause"><i class="bi-pause" role="img" aria-label="pause"></i></button>
+    <button class="btn btn-secondary" id="link"><i class="bi-link-45deg" role="img" aria-label="link"></i></button>
+    </div>
+    <hr />
+    <a href="https://fullstory.com/" target="_blank"><img class="link" src="/images/fullstory.png" height="40" border="0" /></a>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
